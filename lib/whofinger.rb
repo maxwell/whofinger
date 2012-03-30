@@ -1,5 +1,9 @@
-require "whofinger/version"
+#gemz
+require 'faraday'
+require 'faraday_middleware'
 
-module Whofinger
-  # Your code goes here...
-end
+require "whofinger/version"
+require "whofinger/http_client"
+require 'whofinger/whofinger'
+require 'whofinger/fetchable_xrd'
+require 'whofinger/host_meta'
