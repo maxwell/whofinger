@@ -22,13 +22,14 @@ describe Whofinger do
 
   describe '#fetch' do
     it 'works' do
+
     end
   end
 
-  describe '#ry_host_meta_on_ssl_and_then_non_ssl' do
+  describe '#try_host_meta_on_ssl_and_then_non_ssl' do
     it 'tries https first' do
       good_host_meta = HostMeta.new(account, true)
-      good_host_meta.stub(:fetch!).and_return(good_host_meta)
+      good_host_meta.stub(:fetch).and_return(good_host_meta)
       HostMeta.should_receive(:new).with(account, true).and_return(good_host_meta)
 
       n = Whofinger.new(account)

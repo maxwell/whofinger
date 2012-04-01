@@ -21,13 +21,13 @@ class Whofinger
     #this tries the xrl url with https first, then falls back to http
   def try_host_meta_on_ssl_and_then_non_ssl
     begin
-      HostMeta.new(account, self.ssl).fetch!
+      HostMeta.new(account, self.ssl).fetch
     rescue => e
       if self.ssl
         self.ssl = false
         retry
       else
-        raise "failed to fetch #{account}"
+        raise e
         nil
       end
     end
