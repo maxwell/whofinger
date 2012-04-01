@@ -23,6 +23,6 @@ module FetchableXRD
 
 
   def raw_links
-    @raw_links ||= @doc.xpath('//xmlns:Link')
+    @raw_links ||= doc.xpath('//xmlns:Link')
   end
 end

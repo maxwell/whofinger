@@ -26,6 +26,7 @@ class HostMeta
   end
 
   def parsed_webfinger_template
+    puts doc.inspect
     doc.at('Link[rel=lrdd]').attribute('template').value
   end
 end
