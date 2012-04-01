@@ -8,7 +8,7 @@ class WebfingerProfile
   end
 
   def public_key
-    content_at['public-key']
+    content_at('public-key')
   end
 
   def content_at(rel)
