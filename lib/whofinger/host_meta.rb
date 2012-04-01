@@ -26,7 +26,6 @@ class HostMeta
   end
 
   def parsed_webfinger_template
-    puts doc.inspect
-    doc.at('Link[rel=lrdd]').attribute('template').value
+    raw_links.find{|x| x['rel'] == 'lrdd'}['template']
   end
 end
