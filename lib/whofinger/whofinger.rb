@@ -13,7 +13,7 @@ class Whofinger
 
   def fetch
     @host_meta = try_host_meta_on_ssl_and_then_non_ssl
-    @webfinger_profile = WebfingerProfile.new(@host_meta.webfinger_profile_url, ssl).fetch
+    @webfinger_profile = WebfingerProfile.new(@host_meta.webfinger_profile_url).fetch
     self
   end
 
