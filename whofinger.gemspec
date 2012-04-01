@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = Whofinger::VERSION
 
   gem.add_development_dependency 'rspec', '~> 2.9'
+  gem.add_development_dependency 'rake'
   gem.add_runtime_dependency 'faraday'
   gem.add_runtime_dependency 'faraday_middleware'
   gem.add_runtime_dependency 'nokogiri'

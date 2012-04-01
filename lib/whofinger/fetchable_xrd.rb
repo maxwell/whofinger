@@ -16,6 +16,7 @@ module FetchableXRD
                   link.keys.each do |key|
                     hash[key] = link[key]
                   end
+                  hash
                 end
               end.call
   end

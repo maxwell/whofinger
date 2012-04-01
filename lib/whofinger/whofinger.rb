@@ -1,5 +1,5 @@
 class Whofinger
-  attr_accessor :account, :ssl, :host_meta, :webfinger_profle
+  attr_accessor :account, :ssl, :host_meta, :webfinger_profile
 
   def initialize(account)
     self.account = account
